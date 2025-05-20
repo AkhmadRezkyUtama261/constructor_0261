@@ -1,16 +1,30 @@
 #include <iostream>
+#include <string>
 using namespace std;
+class Barang
+{
+private:
+string kodeBarang;
+string namaBarang;
 
-class mahasiswa{
-    public:
-    mahasiswa(); //constructor
+public:
+    Barang(string kode, string nama)
+    {
+        kodeBarang = kode;
+        namaBarang = nama;
+    }
+
+    void tampilkanInformasi()
+    {
+        cout << "Kode Barang: " << kodeBarang << endl;
+        cout << "Nama Barang: " << namaBarang << endl;
+    }
 };
 
-mahasiswa::mahasiswa(){
-    cout<<"Constructor terpanggil"<<endl;  //Definisi Constructor
-}
+int main()
+{
+    Barang barang1("Kardus", "B.055");
 
-int main(){
-    mahasiswa mhs; //Pembuatan object
+    barang1.tampilkanInformasi();
     return 0;
 }
